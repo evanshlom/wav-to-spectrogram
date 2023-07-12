@@ -18,7 +18,7 @@ n_fft=2048
 hop_length=512
 
 # Load sample audio file
-sample_data = 'wavs\Literally.wav'
+sample_data = 'wavs\Beached.wav'
 y, sr = librosa.load(sample_data)
 
 # Calculate the spectrogram as the square of the complex magnitude of the STFT
@@ -34,7 +34,7 @@ def show_spectrogram(spec, title, sr, hop_length, y_axis='log', x_axis='time'):
     plt.title(title)
     plt.colorbar(format='%+2.0f dB')
     plt.tight_layout()
-    plt.savefig('output/spectrogram-literally.png')
+    plt.savefig('output/spectrogram-beached.png')
     #plt.show()
 
 show_spectrogram(spectrogram_librosa_db, 'Reference power spectrogram', sr, hop_length)
